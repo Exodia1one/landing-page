@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="header">
@@ -20,7 +24,8 @@
     <div class="content">
         <div class="description">
             <div class="left-side">
-                <div class="awesome"> Welcome to my Website</div>
+                <div class="awesome"> Hello, I'm</div>
+                <div class="name"> Noah Zhuo</div>
                 <p> This website holds a collection of my favorite pieces of media, ranging from videogames to anime!</p>
                 <div class="exclamation"> Are you ready to explore?</div>
                 <button class="learn"> Learn More!</button>
@@ -81,5 +86,15 @@
     <div class="footer">
         Copyright &copy; The Odin Project 2023
     </div>
+    <script>
+        document.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 0) {
+                header.classList.add('black');
+            } else {
+                header.classList.remove('black');
+            }
+        })
+    </script>
 </body>
 </html>

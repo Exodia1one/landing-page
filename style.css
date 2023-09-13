@@ -4,15 +4,22 @@
     box-sizing: border-box;
 }
 .header {
-    min-height: 20vh;
+    min-height: 12vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(maple.jpg);
+    /*background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(maple.jpg);*/
+    background-color: rgba(0,0,0,0);
     background-position: center;
-    background-size: cover;
+    /*background-size: cover;*/
     display: flex;
     justify-content: space-between;
     position: sticky;
     top: 0;
+    font-size: 18px;
+    font-weight: 700;
+    transition: .4s ease-in-out;
+}
+.header.black {
+    background: black;
 }
 body {
     display: flex;
@@ -20,7 +27,7 @@ body {
     flex-direction: column;
     color: white;
     /*background-color: rgb(18, 17, 24)*/
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(imgs/forest.jpg);
+    background-image: url(imgs/hero_pattern.jpg);
     background-position: center;
     background-attachment: fixed;
 }
@@ -53,7 +60,7 @@ body {
 .description {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(17, 16, 16);
+    /*background-color: rgb(17, 16, 16);*/
     flex-wrap: wrap;
     padding: 60px;
     gap: 40px;
@@ -66,10 +73,10 @@ body {
     gap: 8px;
 }
 .content {
-    margin-top: 80px;
+    margin-top: 0px;
     margin-bottom: 80px;
-    margin-right: 13%;
-    margin-left: 13%;
+    /*margin-right: 13%;
+    margin-left: 13%;*/
 }
 .description img {
     border-radius: 50%;
@@ -80,13 +87,15 @@ body {
     border: 2px solid white;
 }
 .awesome {
-    font-size: 32px;
+    font-size: 26px;
+    font-family: 'Roboto Mono', monospace;
     font-weight: 700;
+    color: rgb(43, 134, 219);
 }
 .learn {
     flex-grow: 0 1 auto;
     width: 120px;
-    background-color: rgb(14, 90, 65)
+    background-color: rgb(43, 134, 219)
 }
 .learn {
     color: white;
@@ -97,13 +106,21 @@ body {
     padding-top: 8px;
     padding-bottom: 8px;
     margin-top: 25px;
+    font-weight: 600;
+}
+.learn:hover {
+    background-color: rgb(248, 241, 241);
+    color: rgb(43, 134, 219);
+    transition: all .5s ease;
 }
 .middle-upper {
+    color: black;
     display: flex;
     flex-direction: column;
     margin-top: 80px;
-    background-color:rgb(17, 16, 16);
-    padding: 24px;
+    background-color: white;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 .heading {
     display: flex;
@@ -112,6 +129,7 @@ body {
     padding: 12px;
     margin-bottom: 20px;
     font-weight: bold;
+    color: rgb(43, 134, 219);
 }
 .card-section {
     display: flex;
@@ -133,20 +151,21 @@ body {
 }
 .card a img:hover {
     border: 3px solid white;
-    transform: translate (-2px, -2px);
+    transform: scale(1.1);
 }
 .text {
     text-align: center;
-    padding: 6px;
+    padding: 18px;
     font-weight: 700;
 }
 .middle-lower {
-    margin-top: 80px;
-    background-color:rgb(17, 16, 16);
+    margin-top: 30px;
+    /*background-color:rgb(17, 16, 16);*/
     padding: 24px;
+    margin-bottom: 40px;
 }
 .quote-section {
-    margin-top: 80px;
+    margin-top: 60px;
     font-size: 26px;
     background-color: rgb(78, 77, 77);
     padding: 24px;
@@ -163,4 +182,8 @@ body {
     padding: 25px;
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(maple.jpg);
     background-position:var(-15px);
+}
+.name {
+    font-size: 50px;
+    font-weight: 700;
 }
